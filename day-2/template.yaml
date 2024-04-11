@@ -1,19 +1,15 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  creationTimestamp: null
   labels:
     run: girus-1
-    service: webserver
   name: girus-1
 spec:
   containers:
-  - image: nginx
-    name: nginx
-  - image: busybox
-    name: busybox
-    args:
-    - sleep
-    - "600"
+  - image: alpine
+    name: girus-1
     resources: {}
   dnsPolicy: ClusterFirst
   restartPolicy: Always
+status: {}
